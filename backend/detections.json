@@ -1,0 +1,67 @@
+[
+  {
+    "plate": "I6SIS425",
+    "state": "Louisiana",
+    "entry_timestamp": "2025-04-21T15:22:39.022070-04:00",
+    "exit_timestamp": "2025-04-21T15:23:39.022366-04:00",
+    "distance": 200.0,
+    "speed": 2.3,
+    "speedLimit": 45.0,
+    "timestamp": "2025-04-21T15:23:41.430391-04:00",
+    "isOverSpeed": false,
+    "previous_detection": null,
+    "plate_image": "plate_20250422_005340.jpg"
+  },
+  {
+    "plate": "FEBICALI",
+    "state": "California",
+    "entry_timestamp": "2025-04-21T15:22:57.701302-04:00",
+    "exit_timestamp": "2025-04-21T15:23:57.701375-04:00",
+    "distance": 2002.0,
+    "speed": 22.7,
+    "speedLimit": 45.0,
+    "timestamp": "2025-04-21T15:23:58.411146-04:00",
+    "isOverSpeed": false,
+    "previous_detection": null,
+    "plate_image": "plate_20250422_005358.jpg"
+  },
+  {
+    "plate": "I6SIS425",
+    "state": "Louisiana",
+    "entry_timestamp": "2025-04-21T15:29:04.718567-04:00",
+    "exit_timestamp": "2025-04-21T15:30:04.718842-04:00",
+    "distance": 2001.0,
+    "speed": 22.7,
+    "speedLimit": 45.0,
+    "timestamp": "2025-04-21T15:30:07.136642-04:00",
+    "isOverSpeed": false,
+    "previous_detection": "2025-04-21T15:23:41.430391-04:00",
+    "plate_image": "plate_20250422_010006.jpg"
+  },
+  {
+    "plate": "DECGLA20",
+    "state": null,
+    "entry_timestamp": "2025-04-21T15:29:26.580628-04:00",
+    "exit_timestamp": "2025-04-21T15:30:26.580704-04:00",
+    "distance": 20012.0,
+    "speed": 227.4,
+    "speedLimit": 45.0,
+    "timestamp": "2025-04-21T15:30:26.947580-04:00",
+    "isOverSpeed": true,
+    "previous_detection": null,
+    "plate_image": "plate_20250422_010026.jpg"
+  },
+  {
+    "plate": "I6SIS425",
+    "state": "Louisiana",
+    "entry_timestamp": "2025-04-22T02:05:55.709341-04:00",
+    "exit_timestamp": "2025-04-22T02:06:55.709489-04:00",
+    "distance": 12363.0,
+    "speed": 140.5,
+    "speedLimit": 25.0,
+    "timestamp": "2025-04-22T02:06:58.062094-04:00",
+    "isOverSpeed": true,
+    "previous_detection": "2025-04-21T15:30:07.136642-04:00",
+    "plate_image": "plate_20250422_113657.jpg"
+  }
+]

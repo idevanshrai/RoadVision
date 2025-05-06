@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RoadVision - AI-powered speed detection and traffic analytics platform">
+    <title>RoadVision | AI-Powered Traffic Analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Enhanced Splash Screen -->
+    <div class="splash-screen">
+        <div class="splash-shapes">
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+            <div class="shape square"></div>
+            <div class="shape hexagon"></div>
+        </div>
+        <div class="splash-content">
+            <div class="splash-logo animate__animated animate__zoomIn">
+                <div class="logo-circle">
+                    <i class="fas fa-camera-retro"></i>
+                </div>
+                <h1>Road<span>Vision</span></h1>
+            </div>
+            <p class="splash-text animate__animated animate__fadeInUp">AI-Powered Traffic Analytics Platform</p>
+            <div class="splash-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="particles-container" id="particles-js"></div>
+    <div class="cursor"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-camera-retro logo-icon icon-3d"></i>
+                <h1>ROAD<span>VISION</span></h1>
+            </div>
+            <button id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h2 class="animate__animated animate__fadeInDown">AI-Powered Speed Detection</h2>
+                <p class="animate__animated animate__fadeInDown animate__delay-1s">Revolutionizing traffic enforcement with computer vision and machine learning</p>
+                <button class="cta-button animate__animated animate__pulse animate__infinite">
+                    <i class="fas fa-play"></i> How it works
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="https://illustrations.popsy.co/amber/digital-nomad.svg" alt="AI Vision Illustration" class="icon-3d animate__animated animate__fadeInRight" id="heroIllustration">
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <div class="upload-section glass-card animate__animated animate__fadeIn">
+            <div class="camera-upload" id="cameraA">
+                <div class="camera-icon">
+                    <i class="fas fa-camera icon-3d"></i>
+                    <span>Camera A</span>
+                </div>
+                <input type="file" id="uploadA" accept="image/*" multiple>
+                <div class="preview" id="previewA">
+                    <i class="fas fa-cloud-upload-alt icon-3d"></i>
+                    <p>Drag & drop images</p>
+                </div>
+            </div>
+
+            <div class="divider">
+                <div class="control-panel glass-card">
+                    <div class="distance-input">
+                        <label><i class="fas fa-ruler-combined"></i> Distance (ft)</label>
+                        <input type="number" id="distance" value="200" min="10">
+                    </div>
+                    <div class="speed-limit-input">
+                        <label><i class="fas fa-tachometer-alt"></i> Speed Limit (mph)</label>
+                        <input type="number" id="speedLimit" value="45" min="1">
+                    </div>
+                    <button id="processBtn" class="glass-button">
+                        <i class="fas fa-play"></i> Analyze
+                    </button>
+                </div>
+            </div>
+
+            <div class="camera-upload" id="cameraB">
+                <div class="camera-icon">
+                    <i class="fas fa-camera icon-3d"></i>
+                    <span>Camera B</span>
+                </div>
+                <input type="file" id="uploadB" accept="image/*" multiple>
+                <div class="preview" id="previewB">
+                    <i class="fas fa-cloud-upload-alt icon-3d"></i>
+                    <p>Drag & drop images</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dashboard">
+            <div class="speed-display glass-card animate__animated animate__fadeInLeft">
+                <div class="gauge-container">
+                    <div class="gauge" id="gauge"></div>
+                    <div class="speed-value">0</div>
+                    <div class="unit">mph</div>
+                </div>
+                <div class="plate-display">
+                    <i class="fas fa-car icon-3d"></i>
+                    <span class="plate-number">—</span>
+                </div>
+            </div>
+
+            <div class="log-container glass-card animate__animated animate__fadeInRight">
+                <div class="log-header">
+                    <h3><i class="fas fa-list-alt"></i> Detection Log</h3>
+                    <div class="log-actions">
+                        <button id="exportBtn" title="Export"><i class="fas fa-file-export"></i></button>
+                        <button id="clearBtn" title="Clear"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="log" id="detectionLog">
+                    <div class="empty-state">
+                        <i class="fas fa-search"></i>
+                        <p>No detections yet. Upload images to begin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Section -->
+       <!-- <div class="analytics-section glass-card animate__animated animate__fadeInUp">
+            <h3><i class="fas fa-chart-line"></i> Speed Analytics</h3>
+            <div class="charts-container">
+                <div class="chart" id="speedChart"></div>
+                <div class="chart" id="timeChart"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Footer -->
+    <footer class="glass-card">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fas fa-camera-retro"></i>
+                <span>ROADVISION</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#"><i class="fas fa-book"></i> Documentation</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2023 RoadVision AI. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
